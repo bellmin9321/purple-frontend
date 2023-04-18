@@ -1,38 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📝 **AWESOME FOOD STORE**
 
-## Getting Started
+# 💬 **프로젝트 설명**
 
-First, run the development server:
+> nextjs와 json-server를 이용한 프로젝트입니다. react-bootstrap으로 css 디자인을 했고, recoil을 이용하여 db.json의 data들을 전역 상태로 관리했습니다. 각 STORE를 클릭 시 모달 팝업이 생기며 맛집 이름, 사진, 설명, URL을 표시했습니다. ABOUT/STORE/NotFound 페이지별 서비스 로직은 커스텀훅으로 만들어 view와 따로 분리해서 관리했습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+# 🔑 **프로젝트 실행방법**
+
+```
+1. package 설치
+npm i
+
+2. 실행
+npm run dev (or yarn dev)
+
+3. (다른 터미널에서) json-server 실행
+json-server -p 9000 db.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 🌈 기술 스택
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **next.js**
+  - 서버 사이드 렌더링(SSR)으로 데이터 pre-reloading\
+  - 페이지 기반 라우팅 시스템
+- **recoil**
+  - 보일러 플레이트 없이 전역 상태 관리
+- **react-bootstrap**
+  - template 및
+- **json-server**
+  - json 파일을 이용하여 client 단에서 가상 server 운영
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# ✅ TODO (7 / 7 완료)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [x] 헤더 - 바디 - 푸터 형식으로 표현
+- [x] 헤더에는 프로젝트이름(`AWESOME FOOD STORE`)과 메뉴(`ABOUT` + `STORE`) 표현
+- [x] 푸터에는 카피라이트 추가(`@ 2020 내이름`)
+- [x] ABOUT엔 간단한 프로젝트 소개 문구 표현 (정적 페이지)
+- [x] STORE 리스트는 정사각형 이미지 그리드로 표현 (REST API 사용)
+- [x] 하나의 아이템을 선택하면 팝업을 띄우고 맛집 이름과 사진, 설명, 홈페이지 바로가기(url이 있을 경우)를 표현
+- [x] 팝업 오른쪽 위에 X버튼을 넣고 누르면 팝업이 닫힘
+- [x] 정의하지 않은 url로 접근시 에러 페이지를 보여주고 5초 후 메인 페이지로 이동
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# 🗂️ 폴더 구조
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+src
+├── components
+│   ├── **Modal**
+│   │   └── index.jsx
+│   └── layout
+│       ├── Body
+│       │   └── index.jsx
+│       ├── Footer
+│       │   └── index.jsx
+│       ├── Header
+│       │   └── index.jsx
+│       ├── IndexPage.jsx
+│       └── index.jsx
+├── hooks
+│   ├── useAbout.js
+│   ├── useNotFound.js
+│   └── useStore.js
+├── pages
+│   ├── 404.jsx
+│   ├── _app.jsx
+│   ├── _document.jsx
+│   ├── about.jsx
+│   ├── api
+│   │   └── hello.js
+│   ├── index.jsx
+│   └── store
+│       └── index.jsx
+├── recoil
+│   └── index.js
+└── styles
+    └── globals.css
+```
