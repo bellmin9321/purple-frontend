@@ -1,6 +1,7 @@
-import useNotFound from '@/hooks/useNotFound';
 import Link from 'next/link';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+
+import useNotFound from '@/hooks/useNotFound';
 
 export default function NotFoundPage() {
   const { seconds } = useNotFound();
