@@ -45,7 +45,7 @@ json-server -p 9000 db.json
 ```
 src
 ├── components
-│   ├── **Modal**
+│   ├── Modal
 │   │   └── index.jsx
 │   └── layout
 │       ├── Body
@@ -56,6 +56,8 @@ src
 │       │   └── index.jsx
 │       ├── IndexPage.jsx
 │       └── index.jsx
+├── constant
+│   └── index.js
 ├── hooks
 │   ├── useAbout.js
 │   ├── useNotFound.js
@@ -72,6 +74,8 @@ src
 │       └── index.jsx
 ├── recoil
 │   └── index.js
-└── styles
-    └── globals.css
+├── styles
+│   └── globals.css
+└── util
+    └── index.js
 ```
