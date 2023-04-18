@@ -7,7 +7,7 @@ function Header() {
   const { pathname } = useRouter();
 
   return (
-    <Navbar bg="dark" variant="dark" style={{ height: '8vmin' }}>
+    <Navbar bg="dark" variant="dark" style={{ height: '50px' }}>
       <Container>
         <Navbar.Brand href="/">AWESOME FOOD STORE</Navbar.Brand>
         <Nav

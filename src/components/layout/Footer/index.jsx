@@ -4,7 +4,7 @@ function Footer() {
       style={{
         backgroundColor: 'black',
         color: 'white',
-        height: '7vmin',
+        height: '50px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',

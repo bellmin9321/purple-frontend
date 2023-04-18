@@ -4,11 +4,12 @@ function Body({ children }) {
   return (
     <section
       style={{
-        height: '85vmin',
+        minHeight: 'calc(100vh - 80px)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: '-20px',
       }}
     >
       {children}
