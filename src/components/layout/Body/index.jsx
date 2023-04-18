@@ -4,7 +4,7 @@ function Body({ children }) {
   return (
     <section
       style={{
-        height: '85vh',
+        height: '85vmin',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
