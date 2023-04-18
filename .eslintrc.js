@@ -10,12 +10,11 @@ module.exports = {
     'next',
     'next/core-web-vitals',
     'prettier',
-    "plugin:prettier/recommended"
+    'plugin:prettier/recommended',
   ],
   rules: {
     'no-unused-vars': 'off',
     'no-console': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/no-unescaped-entities': 'off',
 
     'react/display-name': 'off',
@@ -24,7 +23,6 @@ module.exports = {
       { props: 'never', children: 'never' },
     ],
 
-    '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': [
       'warn',
@@ -62,7 +60,7 @@ module.exports = {
         ],
       },
     ],
-    "@next/next/no-img-element": "off"
+    '@next/next/no-img-element': 'off',
   },
   globals: {
     React: true,
