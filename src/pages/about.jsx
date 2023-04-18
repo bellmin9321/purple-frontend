@@ -3,7 +3,9 @@ import React from 'react';
 
 import useAbout from '@/hooks/useAbout';
 
+import { description } from '@/constant';
 import { techStacks, todos } from '@/recoil';
+import { insertEnter } from '@/util';
 
 function About() {
   const { checks, handleChange } = useAbout();
@@ -14,16 +16,16 @@ function About() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        margin: '30px 0px 30px 0px',
       }}
     >
-      <h1 style={{ color: 'Purple', fontSize: '50px' }}>
-        Welcome to AWESOME FOOD STORE
-      </h1>
       <div
         style={{
           margin: '10px 0px 0px 100px',
         }}
       >
+        <h2>Description</h2>
+        <p dangerouslySetInnerHTML={{ __html: insertEnter(description) }} />
         <h2>Tech Stack</h2>
         <div style={{ marginBottom: 20 }}>
           {techStacks.map((tech, i) => {

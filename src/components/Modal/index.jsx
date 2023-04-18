@@ -5,15 +5,11 @@ import { useRecoilValue } from 'recoil';
 import useStore from '@/hooks/useStore';
 
 import { selectedStore } from '@/recoil';
+import { insertDoubleEnter } from '@/util';
 
 function StoreModal() {
   const { show, setShow } = useStore();
   const store = useRecoilValue(selectedStore);
-
-  const insertEnter = (str) => {
-    const arr = str.split('.');
-    return arr.join('.<br /><br />');
-  };
 
   return (
     <Modal
@@ -44,7 +40,9 @@ function StoreModal() {
             {store.name}
           </Modal.Title>
           <p
-            dangerouslySetInnerHTML={{ __html: insertEnter(store.description) }}
+            dangerouslySetInnerHTML={{
+              __html: insertDoubleEnter(store.description),
+            }}
           />
           {store.url && <Link href={store.url}>{store.url}</Link>}
         </section>
