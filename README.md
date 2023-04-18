@@ -25,7 +25,7 @@ json-server -p 9000 db.json
 - **recoil**
   - 보일러 플레이트 없이 전역 상태 관리
 - **react-bootstrap**
-  - template 및
+  - 레이아웃, 버튼, 입력창 등의 템플릿 CSS 프레임워크
 - **json-server**
   - json 파일을 이용하여 client 단에서 가상 server 운영
 
