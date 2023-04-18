@@ -10,6 +10,7 @@ module.exports = {
     'next',
     'next/core-web-vitals',
     'prettier',
+    "plugin:prettier/recommended"
   ],
   rules: {
     'no-unused-vars': 'off',
